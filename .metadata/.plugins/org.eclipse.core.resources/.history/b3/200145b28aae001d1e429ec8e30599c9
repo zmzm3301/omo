@@ -1,0 +1,5 @@
+package com.omo.dao;
+
+public class PersonDAO {
+
+}

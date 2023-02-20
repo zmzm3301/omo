@@ -1,0 +1,16 @@
+USE host;
+
+CREATE TABLE if NOT exists user_data (
+	NO INT NOT NULL AUTO_INCREMENT,
+	NAME VARCHAR(20) NOT NULL,
+	id VARCHAR(20) NOT NULL,
+	PASSWORD VARCHAR(20) NOT NULL,
+	birth VARCHAR(50) NOT NULL,
+	sex VARCHAR(10) NOT NULL,
+	PRIMARY KEY (NO) USING btree
+);
+
+INSERT INTO user_data (NAME, id, PASSWORD, birth, sex) VALUES ("lee", "aa", "bb", "19970317","Male");
+
+COMMIT;
+	
