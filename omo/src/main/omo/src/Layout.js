@@ -5,7 +5,7 @@ import signin_img from './static/images/login.png';
 import './App.css';
 import { useEffect, useState } from "react";
 import axios from 'axios'
-import $ from 'jquery'
+// import $ from 'jquery'
 
 const Layout = () => {
     const [person, setPerson] = useState('')
@@ -34,7 +34,6 @@ const Layout = () => {
     useEffect(() => {
         axios.get('/persons').then(response => setPerson(response.data))
             .catch(error => console.log(error))
-                
     }, []);
 
     const info = document.getElementById('info')
@@ -44,7 +43,7 @@ const Layout = () => {
         const newDiv = document.createElement('div')
         newDiv.style.border="1px solid black";
         newDiv.style.width="180px";
-        newDiv.append(person[i].name + "  " + person[i].job)
+        newDiv.append('name: ' + person[i].name + ', job: ' + person[i].job)
         info.append(newDiv)
     }
     console.log(person)
