@@ -7,9 +7,9 @@ import axios from "axios";
 // 뒤로가기
 const SignIn = () => {
     const navigate = useNavigate()
-    const back = () => {
-        navigate(-1)
-    }
+    // const back = () => {
+    //     navigate(-1)
+    // }
     const [person, setPerson] = useState("")
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const SignIn = () => {
     }
 
     const onClickLogin = () => {
-        if (handleInput_id == name && handleInput_pw == job) {
+        if (handleInput_id === name && handleInput_pw === job) {
             console.log('1')
             navigate('/')
         }

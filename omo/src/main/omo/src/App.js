@@ -23,6 +23,8 @@ function App() {
             <Route path='/product/:productid' element={<Product />} />
             <Route path='/signin' element={<SignIn />} />
             <Route path='/signup' element={<SignUp />} />
+            <Route path='/klogin' element={<Home />}></Route>
+            <Route path='/klogout' element={<Home />}></Route>
             <Route path='/search' element={<Search />} />
             <Route path='/search_pw' element={<SearchPw />} />
           </Route>
